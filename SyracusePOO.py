@@ -1,13 +1,16 @@
+#Clément Josse
 import numpy as np
 
 class Syracuse :
-    def __init__(self,number1,number2):
-        self.d=number1
-        self.n=number2
+    def __init__(self,txt):
+        self.d=int(txt[0])
+        self.n=int(txt[1])
         
     def calcul(self):
-        
+        f=open("output.txt","w")
+        f.write(str(self.d)+'\n')
         print(self.d)
+
 
         i = 0
 
@@ -17,18 +20,17 @@ class Syracuse :
             else :
                 self.d = self.d * 3 + 1
             i +=1
-
+            f.write(str(self.d)+'\n')
             print(self.d)
 
+        f.close()
 
-datatext=np.loadtxt(fname="data.txt")
+
+inputText=np.loadtxt(fname="input.txt")
 
        
 print("CONJECTURE DE SYRACUSE POO")
-print("Contenu du txt :",datatext)
+print("Contenu du txt :",inputText)
 
-d=int(datatext[0])
-n=int(datatext[1])
-
-test=Syracuse(d,n)
+test=Syracuse(inputText)
 test.calcul()
