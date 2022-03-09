@@ -10,10 +10,10 @@ print(d)
 i = 0
 
 while i < n :
-    if d % 2 == 0:
-      d = d // 2  
-    else :
-        d = d * 3 + 1
-    i +=1
+  if(d%2==0):
+    d= d // 2
+  else :
+      d = d * 3 + 1
+  i +=1
 
-    print(d)
+  print(d)
