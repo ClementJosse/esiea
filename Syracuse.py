@@ -2,7 +2,7 @@
 
 print("CONJECTURE DE SYRACUSE")
 
-d=int(input("Nombre de départ : "))
+d=int(input("Nombre de départ :  "))
 n=int(input("Nombre d'iterrations : "))
 
 print(d)
